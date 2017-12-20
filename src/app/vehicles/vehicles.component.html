@@ -1,0 +1,19 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Vehicle Name</th>
+      <th scope="col">Tracking Id</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let myVehicle of vehicles">
+      <td>{{myVehicle.name}}</td>
+      <td>{{myVehicle.trackingId}}</td>
+      <td>
+        <button type="button" class="btn btn-primary btn-sm" (click)="trackVehicle(myVehicle)">Track</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<app-track-vehicle [vehicle]="selectedVehicle"></app-track-vehicle>
